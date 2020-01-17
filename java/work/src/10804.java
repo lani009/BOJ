@@ -1,0 +1,29 @@
+import java.util.Scanner;
+import java.util.Stack;
+
+class aasa {
+    static int arr[];
+    public static void main(String[] args){
+        arr = new int[21];
+        Stack<Integer> stack = new Stack<>();
+        Scanner key = new Scanner(System.in);
+        for(int i = 0; i <= 20; i++){
+            arr[i] = i;
+        }
+        for(int i = 0; i < 10; i++){
+            changer(key.nextInt(), key.nextInt(), stack);
+        }
+        for(int i = 1; i <= 20; i++){
+            System.out.printf("%d ", arr[i]);
+        }
+    }
+
+    static void changer(int a, int b, Stack<Integer> stack){
+        for(int i = a; i <= b; i++){
+            stack.push(arr[i]);
+        }
+        for(int i = a; i <= b; i++){
+            arr[i] = stack.pop();
+        }
+    }
+}

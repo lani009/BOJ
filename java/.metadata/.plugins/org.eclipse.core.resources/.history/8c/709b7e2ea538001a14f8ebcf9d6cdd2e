@@ -1,0 +1,52 @@
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.util.ArrayList;
+import java.util.LinkedList;
+import java.util.Queue;
+import java.util.StringTokenizer;
+import java.util.TreeMap;
+
+class aaa {
+    static ArrayList<TreeMap<Integer, Weight>> map;
+    static boolean visited[];
+    static int start, dest;
+    static int N, M;
+    static int spanning[];
+    static ArrayList<int[]> route;
+    public static void main(final String[] args) throws IOException {
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        StringTokenizer strtok = new StringTokenizer(br.readLine(), " ");
+        N = Integer.parseInt(strtok.nextToken());
+        M = Integer.parseInt(strtok.nextToken());
+        final int info[][] = new int[N][N];
+        int a, b, c;
+        for (int i = 0; i < M; i++) {
+            strtok = new StringTokenizer(br.readLine(), " ");
+            map.add(new TreeMap<Integer, Weight>());
+            a = Integer.parseInt(strtok.nextToken());
+            b = Integer.parseInt(strtok.nextToken());
+            c = Integer.parseInt(strtok.nextToken());
+            map.get(a).put(a, new Weight(b, c));
+            map.get(b).put(b, new Weight(a, c));
+        }
+        strtok = new StringTokenizer(br.readLine(), " ");
+        start = Integer.parseInt(strtok.nextToken());
+        dest = Integer.parseInt(strtok.nextToken());
+        visited = new boolean[N];
+        find(start);
+    }
+    public static void find(int i){
+        spanning = new int[N];
+        
+        
+    }
+}
+class Weight{
+    int to;
+    int kg;
+    public Weight(int a, int b){
+        this.to = a;
+        this.kg = b;
+    }
+}
