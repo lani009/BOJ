@@ -1,3 +1,5 @@
+package N1000;
+
 import java.util.InputMismatchException;
 import java.util.LinkedList;
 import java.util.Queue;
