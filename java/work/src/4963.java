@@ -5,7 +5,6 @@ import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
 import java.util.Arrays;
 import java.util.StringTokenizer;
-
 class Boj4963{
     static int W, H, K;
     static int map[][];
@@ -34,7 +33,6 @@ class Boj4963{
                 dfs(arr[0], arr[1]);
                 arr = checker();
             }
-
             bw.write(Integer.toString(num) + '\n');
         }
         
