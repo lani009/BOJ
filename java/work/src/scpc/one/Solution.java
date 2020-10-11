@@ -75,7 +75,8 @@ class Solution {
 
 			// Print the answer to standard output(screen).
 			System.out.println("Case #"+(test_case+1));
-			System.out.println(Answer);
+            System.out.println(Answer);
+            sc.close();
 		}
 	}
 }
